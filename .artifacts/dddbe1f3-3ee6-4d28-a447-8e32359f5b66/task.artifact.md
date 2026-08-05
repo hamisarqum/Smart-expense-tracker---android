@@ -1,0 +1,28 @@
+# Tasks - Phase 5: Final Polish & Release Preparation
+
+- [ ] Build & Dependencies
+    - [x] Add splashscreen dependency to `libs.versions.toml`
+    - [ ] Add splashscreen dependency and versioning to `app/build.gradle.kts`
+    - [ ] Configure Release build type in `app/build.gradle.kts`
+- [ ] Branding & Resources
+    - [ ] Update `strings.xml` (Branding + UI strings)
+    - [ ] Update adaptive icon resources (`ic_launcher_foreground.xml`, `ic_launcher_background.xml`)
+    - [ ] Create `res/values/styles.xml` for Splash Screen
+- [ ] UI Consistency & Polishing
+    - [ ] Create `ui/theme/Dimensions.kt`
+    - [ ] Integrate `installSplashScreen()` in `MainActivity`
+    - [ ] Polish `HomeScreen`
+    - [ ] Polish `TransactionsScreen`
+    - [ ] Polish `AddTransactionScreen`
+    - [ ] Polish `ReportsScreen`
+    - [ ] Polish `SettingsScreen`
+    - [ ] Polish `BudgetScreen`
+- [ ] Code Quality & Cleanup
+    - [ ] Delete `BakingScreen.kt`, `BakingViewModel.kt`, `UiState.kt`
+    - [ ] Remove all `TODO`s and unused imports
+- [ ] Testing
+    - [ ] Add unit tests for budget and formatting
+    - [ ] Run full build validation (`clean`, `kspDebugKotlin`, `testDebugUnitTest`, `lintDebug`, `assembleDebug`, `assembleRelease`, `bundleRelease`)
+- [ ] Documentation
+    - [ ] Prepare Play Store listing draft
+    - [ ] Prepare Privacy Policy draft
