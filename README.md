@@ -102,9 +102,9 @@ app/build/outputs/apk/debug/
 
 ## Testing and Verification
 
-The app was developed through iterative implementation, debugging, Gradle build verification, emulator testing, and physical-device testing. Functional checks were performed for transaction management, budgets, preferences, reports, notifications, CSV and PDF export, and file sharing.
+The app was developed through iterative implementation, debugging, Gradle build verification, emulator testing, and physical-device testing. Functional checks covered transaction management, budgets, preferences, reports, notifications, CSV and PDF export, and file sharing.
 
-The repository currently contains the standard starter unit and instrumented test files. Broader automated feature-test coverage can be added in a future iteration.
+Automated feature-test coverage is not currently included in the repository and can be added in a future iteration.
 
 ## Development Assistance
 
