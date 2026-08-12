@@ -108,7 +108,7 @@ The repository currently contains the standard starter unit and instrumented tes
 
 ## Development Assistance
 
-Cursor AI was used during planning, coding, debugging, and refinement. Gemini-based development assistance was also used during the implementation process. Suggested changes were reviewed and tested before being incorporated into the application.
+Cursor AI was used during planning, coding, debugging, and refinement. Suggested changes were reviewed and tested before being incorporated into the application.
 
 ## Current Build Configuration
 
