@@ -1,136 +1,128 @@
-Smart Expense Tracker
+# Smart Expense Tracker
 
-Smart Expense Tracker is a native Android application for recording income and expenses, managing monthly budgets, and understanding spending patterns. It is designed as a practical, local-first solution for users who want simple financial tracking without connecting a bank account or creating an online account.
+## Project Overview
 
-Key Features
+Smart Expense Tracker is a native Android application for recording income and expenses, managing monthly budgets, and reviewing spending patterns. The app follows a local-first approach, so core financial records are stored on the device without requiring a bank connection or user account.
 
-Add, edit, delete, search, and filter transactions
+## Key Features
 
-Track income, expenses, and current balance
+- Add, edit, delete, search, and filter transactions
+- Track income, expenses, and current balance
+- Create and manage monthly budgets
+- Display budget progress and warning states
+- Generate reports across different date ranges
+- View category, trend, and comparison charts
+- Export report data as CSV
+- Generate PDF reports
+- Share exported files through the Android Sharesheet
+- Receive budget warning and exceeded notifications
+- Select currency and user name preferences
+- Choose light, dark, or system theme
+- Store transactions, budgets, and preferences locally
 
-Set and manage monthly budgets
+## Main Screens
 
-View budget progress and warning states
+- Home dashboard
+- Transactions
+- Add and edit transaction
+- Monthly budget
+- Reports and charts
+- Settings
 
-Generate reports for different date ranges
+## Technology Stack
 
-Display category, trend, and comparison charts
+- **Language:** Kotlin
+- **UI:** Jetpack Compose and Material 3
+- **Architecture:** MVVM-style separation with repositories and ViewModels
+- **Local Database:** Room
+- **Persistence:** Preferences DataStore
+- **Navigation:** Navigation Compose
+- **Background Work:** WorkManager
+- **Code Generation:** KSP
+- **Export:** Android PdfDocument and CSV generation
+- **File Sharing:** FileProvider and Android Sharesheet
+- **Build System:** Gradle Kotlin DSL
 
-Export selected reports as CSV and PDF
+The application schedules periodic budget checks with WorkManager and uses local repositories for transaction, budget, report, and preference data.
 
-Share exported files through the Android Sharesheet
+## Project Structure
 
-Receive budget warning and exceeded notifications
+```text
+app/src/main/java/com/example/myapplication1/
+|-- data/            Room database, DataStore, repositories, and app container
+|-- export/          CSV and PDF export logic
+|-- model/           Application data models
+|-- navigation/      Routes and navigation setup
+|-- notifications/   Budget notification worker and helpers
+|-- ui/              Screens, reusable components, and theme
+|-- utils/           Date, currency, and calculation utilities
+|-- viewmodel/       UI state and business logic
+|-- MainActivity.kt
+`-- ExpenseTrackerApplication.kt
+```
 
-Select currency, user name, and light, dark, or system theme
+## Data and Privacy
 
-Store transactions, budgets, and preferences locally
+- Financial records are stored locally on the device.
+- The app does not connect directly to bank accounts.
+- Transaction records are not uploaded to a remote application server as part of the core expense-tracking workflow.
+- Exported files are created only when requested by the user.
+- Shared files use Android content URIs through FileProvider.
 
-Screens
+## Getting Started
 
-Home dashboard
+### Requirements
 
-Transactions
+- Android Studio
+- Android SDK
+- JDK supported by the configured Android Gradle Plugin
+- Android emulator or physical Android device
 
-Add and edit transaction
+### Run the App
 
-Monthly budget
+1. Clone or download the repository.
+2. Open the project in Android Studio.
+3. Allow Gradle to synchronize the project.
+4. Start an emulator or connect an Android device with USB debugging enabled.
+5. Select the device and run the `app` configuration.
 
-Reports and charts
+### Build from the Command Line on Windows
 
-Settings
-
-Technology Stack
-
-Kotlin
-
-Jetpack Compose
-
-Material 3
-
-MVVM architecture
-
-Room Database
-
-KSP
-
-Preferences DataStore
-
-Navigation Compose
-
-WorkManager
-
-Android PdfDocument
-
-FileProvider
-
-Cursor AI with Gemini API support during development
-
-Project Structure
-
-data/           Room database, DataStore, and repositories
-model/          Application data models
-navigation/     Routes and navigation setup
-notifications/  Budget notification worker and helpers
-export/         CSV, PDF, and file-sharing services
-ui/             Screens, components, and theme
-viewmodel/      UI state and business logic
-utils/          Date, currency, and calculation utilities
-
-Getting Started
-
-Requirements
-
-Android Studio
-
-Android SDK
-
-Git
-
-Android emulator or physical Android device
-
-Run the App
-
-Clone or download this repository.
-
-Open the project in Android Studio.
-
-Allow Gradle to synchronize the project.
-
-Connect an Android phone with USB debugging enabled, or start an emulator.
-
-Select the device and click Run.
-
-Build on Windows
-
+```bash
 gradlew.bat clean
 gradlew.bat kspDebugKotlin
 gradlew.bat assembleDebug
+```
 
 The debug APK is generated under:
 
+```text
 app/build/outputs/apk/debug/
+```
 
-Data and Privacy
+## Testing and Verification
 
-Financial data is stored locally on the device.
+The app was developed through iterative implementation, debugging, Gradle build verification, emulator testing, and physical-device testing. Functional checks were performed for transaction management, budgets, preferences, reports, notifications, CSV and PDF export, and file sharing.
 
-The app does not connect to bank accounts.
+The repository currently contains the standard starter unit and instrumented test files. Broader automated feature-test coverage can be added in a future iteration.
 
-Transactions are not uploaded to a server.
+## Development Assistance
 
-Exported files are created only when requested by the user.
+Cursor AI was used during planning, coding, debugging, and refinement. Gemini-based development assistance was also used during the implementation process. Suggested changes were reviewed and tested before being incorporated into the application.
 
-Shared files use secure Android content URIs.
+## Current Build Configuration
 
-Testing
+- Minimum Android SDK: 24
+- Target Android SDK: 36
+- Application version: 1.0.0
+- Release builds use code shrinking and resource shrinking
 
-The application was developed through iterative planning, implementation, debugging, and build verification. Testing covers transaction management, budget calculations, preference persistence, reports, notifications, CSV and PDF exports, file sharing, and real-device execution through USB.
+## License
 
-Development Assistance
+This project was created for educational and portfolio purposes.
 
-Cursor AI was used during planning, coding, debugging, and refinement. Gemini API support was also used to help analyze issues and improve the implementation. All generated suggestions were reviewed and tested before inclusion.
+## Contact
 
-License
+**Muhammad Hamis Arqum**
 
-This project was created for educational purposes.
+[LinkedIn Profile](https://www.linkedin.com/in/hamis-arqum/)
